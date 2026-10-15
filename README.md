@@ -143,3 +143,50 @@ Le client reçoit et affiche le résultat 25.
 ![Exécution du client](capture/3.png)
 ![Exécution du client](capture/4.png)
 
+## Activité 1-3 : Amélioration sur le service de calculatrice
+
+### Objectif
+
+Améliorer l'application Client/Serveur de l'activité 1-2 afin de permettre une connexion entre deux machines distinctes du même réseau local et de proposer quatre opérations mathématiques.
+
+### Étape 1 : Connexion entre deux machines
+
+Nous avons utilisé les classes `InetAddress` et `InetSocketAddress` pour configurer l'adresse IP et le port de communication.
+
+Le serveur écoute les demandes sur son adresse IPv4 et sur le port 5000.
+
+Le client utilise l'adresse IP du serveur afin d'établir une connexion TCP.
+
+![Exécution](capture/ipadress.png)
+
+![Exécution](capture/cnx.png)
+
+![Exécution ](capture/clientcncte.png)
+
+### Étape 2 : Amélioration de la calculatrice
+
+Nous avons ajouté un menu contenant quatre opérations : addition, soustraction, multiplication et division.
+
+Le client saisit une opération et une valeur `x`, puis transmet ces informations au serveur.
+
+Le serveur effectue le calcul avec la valeur 5 comme deuxième opérande et renvoie le résultat au client.
+
+### Tests effectués
+
+| Opération | Valeur x | Résultat attendu |
+|---|---:|---:|
+| Addition | 6 | 11 |
+| Soustraction | 6 | 3 |
+| Multiplication | 6 | 30 |
+| Division | 6 | 1.2 |
+
+![Exécution](capture/exec.png)
+
+![Exécution](capture/6c.png)
+
+![Exécution](capture/11s.png)
+
+### Conclusion
+
+Cette activité nous a permis de comprendre la communication TCP entre deux machines distinctes et d'améliorer une application répartie en ajoutant plusieurs services de calcul exécutés côté serveur.
+
