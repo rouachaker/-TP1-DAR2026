@@ -97,7 +97,7 @@ Le client peut ainsi se connecter au serveur à l'aide de son adresse IP.
 
 Le projet tp1 est destiné à être publié dans un repository GitHub contenant les codes Java, les captures d'écran et le fichier README.
 
-https://github.com/rouachaker/tp1
+https://github.com/rouachaker/TP1-DAR2026
 
 
 ### Conclusion
