@@ -3,6 +3,107 @@
 ## Activité 1-1 : Première connexion Client/Serveur
 
 
+### Objectif
+
+L'objectif de cette activité est d'établir une communication entre un client et un serveur en Java à l'aide des sockets en mode connecté TCP.
+
+### Étape 1 : Préparation de l'environnement Git
+
+Nous avons vérifié l'installation de Git avec la commande :
+
+git --version
+
+Cette commande permet d'afficher la version de Git installée.
+
+
+
+### Étape 2 : Préparation de l'environnement Java
+
+Nous avons vérifié la version de Java avec la commande :
+
+java --version
+
+Nous avons ensuite préparé le répertoire de travail ChakerRoua_LSI3_DevAppReparties.
+
+
+
+### Étape 3 : Création du serveur
+
+Nous avons créé un projet Java nommé TP1-DAR2026 dans IntelliJ IDEA.
+
+Dans le répertoire src, nous avons créé le package serverPackage contenant la classe Server.java.
+
+Le serveur utilise ServerSocket sur le port 5000 et la méthode accept() pour attendre la connexion d'un client.
+
+Résultat attendu :
+
+Je suis un serveur en attente la connexion d'un client
+
+Interprétation :
+
+Le serveur est démarré et reste en attente jusqu'à ce qu'un client demande une connexion.
+
+![Exécution](capture/server att.png)
+
+
+
+### Étape 4 : Création du client
+
+Nous avons créé le package clientPackage contenant la classe Client.java.
+
+Le client utilise la classe Socket pour se connecter au serveur à l'adresse localhost sur le port 5000.
+
+Résultat attendu côté client :
+
+Je suis un client pas encore connecté...
+je suis un client connecté
+
+Résultat attendu côté serveur :
+
+Je suis un serveur en attente la connexion d'un client
+un client est connecté
+
+Interprétation :
+
+Le client établit une connexion TCP avec le serveur. Dès que la connexion est établie, les deux applications affichent les messages de confirmation. Les sockets sont ensuite fermées.
+
+![Exécution](capture/cc.png)
+
+
+
+Connexion acceptée par le serveur
+![Exécution](capture/accp.png)
+
+
+
+Remplacement de localhost par une adresse IP
+
+Nous avons récupéré l'adresse IPv4 de la machine serveur avec la commande :
+
+ipconfig
+
+Nous avons ensuite remplacé localhost par cette adresse IP dans le code du client.
+
+Socket socket = new Socket("192.168.1.14", 5000);
+![Exécution](capture/code.png)
+
+
+Le client peut ainsi se connecter au serveur à l'aide de son adresse IP.
+![Exécution](capture/cd.png)
+![Exécution](capture/cd1.png)
+
+
+### Étape 5 : Dépôt des livrables
+
+Le projet tp1 est destiné à être publié dans un repository GitHub contenant les codes Java, les captures d'écran et le fichier README.
+
+https://github.com/rouachaker/tp1
+
+
+### Conclusion
+
+Cette activité nous a permis de comprendre le fonctionnement de la communication Client/Serveur en Java à travers les sockets TCP. Nous avons appris à créer un serveur, établir une connexion cliente et fermer les sockets après la communication.
+
 
 
 
